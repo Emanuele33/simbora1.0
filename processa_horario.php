@@ -21,6 +21,6 @@ $consulta->bindParam(6,$hora_sabado);
 $consulta->bindParam(7,$hora_domingo);
 $consulta->execute();
 
-
+header('location:tabelahorarios.php');
 
 ?>

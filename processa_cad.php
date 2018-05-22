@@ -21,7 +21,7 @@ $consulta->bindParam(6,$destino);
 
 
 $consulta->execute();
-
+header('location:mapa.php');
 
 
 ?>

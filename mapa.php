@@ -20,8 +20,9 @@
 
   <body>
     <div id="map"></div><br><br>
-    <a href="cads_lugar.php">Cadastrar Horários de Rotina</a>
+    <a href="cads_lugar.php">Cadastrar sua Rotina</a>
     <a href="cads_horarios.php">Cadastre seu Horário</a><br>
+    <a href="sair.php">Sair</a>
 
 
     
