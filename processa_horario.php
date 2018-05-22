@@ -13,8 +13,21 @@ $hora_domingo = $_POST['hora_domingo'];
 $sql = "INSERT INTO tabela_horarios(hora_segunda,hora_terca,hora_quarta,hora_quinta,hora_sexta,hora_sabado,hora_domingo) VALUES ('$hora_segunda','$hora_terca','$hora_quarta','$hora_quinta','$hora_sexta','$hora_sabado','$hora_domingo')";
 $insert_member_res = mysqli_query($conn,$sql);
 if (mysqli_affected_rows($conn)>0) {
-	echo "<p>Cadastro Registrado!</p>";
+	echo "<ol>
+		Horário de Segunda-Feira:".$hora_segunda."<br>
+		Horário de Terça-Feira:".$hora_terca."<br>
+		Horário de Quarta-Feira:".$hora_quarta."<br>
+		Horário de Quinta-Feira:".$hora_quinta."<br>
+		Horário de Sexta-Feira:".$hora_sexta."<br>
+		Horário de Sábado:".$hora_sabado."<br>
+		Horário de Domingo:".$hora_domingo."<br>
+		
+		</ol>";
+		
+		
 }
 
 ?>
+
+
 

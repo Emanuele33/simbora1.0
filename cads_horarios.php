@@ -5,7 +5,8 @@
 	<title>Cadastro de Rotina</title>
 </head>
 <body>
-	<form action="processa_horario.php" method="POST">
+	
+	<form action="pagina.php" method="POST">
 		Segunda-Feira:<input type="time" name="hora_segunda" placeholder="Hora"><br><br>
 		Terça-Feira:<input type="time" name="hora_terca" placeholder="Hora"><br><br>
 		Quarta-Feira:<input type="time" name="hora_quarta" placeholder="Hora"><br><br>
