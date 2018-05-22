@@ -13,7 +13,7 @@ session_start();
     <input type="password" name="senha" placeholder="Senha">
     <input type="submit" value="Logar">
   </form>
-<a href="cads_usuario.php">Cadastro de Usuários</a>
+<a href="cads_usuario.php">Cadastro de Usuários</a><br>
 
 
 </body>

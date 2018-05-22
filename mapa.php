@@ -7,7 +7,7 @@
       /* Always set the map height explicitly to define the size of the div
        * element that contains the map. */
       #map {
-        height: 100%;
+        height: 80%;
       }
       /* Optional: Makes the sample page fill the window. */
       html, body {
@@ -20,9 +20,11 @@
 
   <body>
     <div id="map"></div><br><br>
-    <a href="cads_lugar.php">Cadastrar Endereço</a>
-    <a href="cads_usuario.php">Cadastro de Usuários</a>
-    <a href="login.php">Login</a>
+    <a href="cads_lugar.php">Cadastrar Horários de Rotina</a>
+    <a href="cads_horarios.php">Cadastre seu Horário</a><br>
+
+
+    
 
     <script>
       var customLabel = {

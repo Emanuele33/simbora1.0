@@ -1,21 +1,23 @@
-
-
 <?php 
+require_once 'conexao.php';
 session_start();
-include ("conexao.php");
 
+$_SESSION['logado'] = false;
+$_SESSION['usuario'] = "";
 $login = $_POST['login'];
 $senha = $_POST['senha'];
-$sql = mysqli_query($conn,"SELECT * FROM usuarios WHERE login = '$login' and senha = '$senha'");
-$row = mysqli_fetch_array($sql);
+$consulta = $conn->prepare("SELECT * FROM usuarios WHERE login = ? AND senha = ?");
+$consulta->bindParam(1,$login);
+$consulta->bindParam(2,$senha);
 
-if ($row > 0) {
-	$_SESSION['login'] = $_POST['login'];
-	$_SESSION['senha'] = $_POST['senha'];
-	header('location:cads_horarios.php');
+$consulta->execute();
+
+if ($consulta->rowCount() >= 1) {
+    $_SESSION['usuario'] = $login;
+    $_SESSION['logado'] = true;
+	header('location:paginahorarios.php');
 }else{
-	header('location:login.php');
-	
+	header('location:index.php');
 }
 
 

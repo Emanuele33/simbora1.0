@@ -1,11 +1,6 @@
-<?php 
+<?php
+$username = "root";
+$password = "";
 
-$servidor = "localhost";
-$usuario = "root";
-$senha = "";
-$dbname = "simbora";
-
-$conn = mysqli_connect($servidor,$usuario,$senha,$dbname);
-
-
+$conn = new PDO('mysql:host=localhost;port=13306;dbname=simbora', $username, $password);
 ?>
