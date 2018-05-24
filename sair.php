@@ -4,5 +4,6 @@ unset(
     $_SESSION['logado'],
 	$_SESSION['usuario']
 );    
-header('location:index.php');
+$_SESSION['logindeslogado'] = "Deslogado com sucesso";
+header("Location: index.php");
 ?>

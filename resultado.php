@@ -23,7 +23,7 @@ $consulta->bindParam(6,$hora_sabado);
 $consulta->bindParam(7,$hora_domingo);
 $consulta->bindParam(8,$usuarios_id);
 if ($consulta->execute()){
-	header('location:tabelahorarios.php');
+	echo "Salvo no banco";
 }else{
 	echo "Erro";
 }
