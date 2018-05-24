@@ -1,25 +1,27 @@
 <?php 
-session_start();
-ob_start();
-include_once("conexao.php");
+include 'conexao.php';
 
-//recebe os dados do formulário
-$dados = filter_input_array(INPUT_POST,FILTER_DEFAULT);
-$name = $dados['name'];
-$address = $dados['address'];
-$diasemana = $dados['diasemana'];
-$horariosaida = $dados['horariosaida'];
-$horariovolta = $dados['horariovolta'];
-$destino = $dados['destino'];
-//salva os dados do bd
-$result_markers = "INSERT INTO markers(name,address,diasemana,horariosaida,horariovolta,destino) VALUES ('$name', '$address', '$diasemana', '$horariosaida', '$horariovolta','$destino')";
+$name = $_POST['name'];
+$address = $_POST['address'];
+$diasemana = $_POST['diasemana'];
+$horariosaida = $_POST['horariosaida'];
+$horariovolta = $_POST['horariovolta'];
+$destino = $_POST['destino'];
 
-$resultado_markers = mysqli_query($conn, $result_markers);
 
-if ($resultado_markers) {
-	echo "success<br>";
-	header('location:index.php');
-} else
-	echo "fail<br>";
+$consulta = $conn->prepare("INSERT INTO markers(name,address,diasemana,horariosaida,horariovolta,destino) VALUES(?,?,?,?,?,?)");
+$consulta->bindParam(1,$name);
+$consulta->bindParam(2,$address);
+$consulta->bindParam(3,$diasemana);
+$consulta->bindParam(4,$horariosaida);
+$consulta->bindParam(5,$horariovolta);
+$consulta->bindParam(6,$destino);
+
+
+
+
+$consulta->execute();
+header('location:mapa.php');
+
 
 ?>

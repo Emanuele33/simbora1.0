@@ -12,7 +12,6 @@ include_once("conexao.php");
 </head>
 
 <body>
-	<a href="index.php">Voltar ao mapa</a>
 
 	<form action="processa_cad.php" method="POST">
 		<input type="text" name="name" placeholder="Nome">
@@ -22,6 +21,11 @@ include_once("conexao.php");
 		<input type="text" name="horariovolta" placeholder="Horário de Volta">
 		<input type="text" name="destino" placeholder="destino">
 		<input type="submit" value="Cadastrar">
-	</form>
+	</form><br>
+
+
+	<a href="index.php">Voltar ao mapa</a><br>
+	<a href="sair.php">Sair</a>
+
 </body>
 </html>
