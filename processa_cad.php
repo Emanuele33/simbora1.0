@@ -16,12 +16,13 @@ $consulta->bindParam(3,$diasemana);
 $consulta->bindParam(4,$horariosaida);
 $consulta->bindParam(5,$horariovolta);
 $consulta->bindParam(6,$destino);
-
-
-
-
 $consulta->execute();
-header('location:mapa.php');
+
+
+header('location:tabelahorarios.php?id=' . $id);
+
+
+//header('location:mapa.php');
 
 
 ?>

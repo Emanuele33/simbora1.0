@@ -1,7 +1,9 @@
 <?php 
+include 'conexao.php';
 session_start();
-include_once("conexao.php");
-
+if ($_SESSION['logado'] == false){
+	header('location:index.php');
+}
 ?>
 <!DOCTYPE html >
 <head>
@@ -24,8 +26,7 @@ include_once("conexao.php");
 	</form><br>
 
 
-	<a href="index.php">Voltar ao mapa</a><br>
-	<a href="sair.php">Sair</a>
+	<a href="tabelahorarios.php"><button class="button"><span>Voltar</span></button></a> <br><br>
 
 </body>
 </html>

@@ -18,7 +18,8 @@ $consulta = $conn->prepare("SELECT * FROM usuarios WHERE login = '$login'");
 $consulta->execute();
 $res = $consulta->fetch(PDO::FETCH_ASSOC);
 $id = $res['id'];
-header('location:cads_horarios.php?id=' . $id);
+echo $id;
+header('location:tabelahorarios.php?id=' . $id);
 
 
 

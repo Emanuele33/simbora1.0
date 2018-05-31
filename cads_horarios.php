@@ -14,7 +14,9 @@
 		Sexta-Feira:<input type="time" name="hora_sexta" placeholder="Hora"><br><br>
 		Sábado:<input type="time" name="hora_sabado" placeholder="Hora"><br><br>
 		Domingo:<input type="time" name="hora_domingo" placeholder="Hora"><br><br>
-		<input type="submit" value="Cadastrar"><br>
+		<input type="submit" value="Cadastrar"><br><br>
 	</form>
+
+	<a href="tabelahorarios.php"><button class="button"><span>Voltar</span></button></a> 
 </body>
 </html>
