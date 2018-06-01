@@ -1,4 +1,5 @@
-<?php 
+<?php
+ 
 include 'conexao.php';
 session_start();
 if ($_SESSION['logado'] == false){
@@ -14,8 +15,8 @@ if ($_SESSION['logado'] == false){
 </head>
 
 <body>
-
-	<form action="processa_cad.php" method="POST">
+	<?php $id = $_GET['id']; ?>
+	<form action="processa_cad.php?id=<?=$id?>" method="POST">
 		<input type="text" name="name" placeholder="Nome">
 		<input type="text" name="address" placeholder="Endereço">
 		<input type="text" name="diasemana" placeholder="Dia da Semana">

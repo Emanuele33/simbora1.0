@@ -1,8 +1,5 @@
 <?php
-session_start();    
-unset(
-	$_SESSION['logado'],
-	$_SESSION['usuario']
-);    
-header('location:index.php');
+	session_start ();
+	session_destroy ();
+	header('location:index.php');
 ?>

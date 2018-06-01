@@ -2,8 +2,8 @@
 include 'conexao.php';
 session_start();
 if ($_SESSION['logado'] == false){
-        header('location:index.php');
-    }
+	header('location:index.php');
+}
 ?>
 
 <!DOCTYPE html>
@@ -67,8 +67,9 @@ if ($_SESSION['logado'] == false){
 		}
 		mysqli_close($strcon);
 		?>
-		<a href="cads_horarios.php?id=<?=$id?>">Cadastre seu Horário</a><br> 
-		<a href="cads_lugar.php?id=<?=$id?>">Cadastre sua Rotina</a><br>
+		
+		<a href="cads_horarios.php?id=<?=$_GET['id']?>">Cadastre seu Horário</a><br> 
+		<a href="cads_lugar.php?id=<?=$_GET['id']?>">Cadastre sua Rotina</a><br>
 		<a href="sair.php">Sair</a><br>
 	</table>
 	<br>
