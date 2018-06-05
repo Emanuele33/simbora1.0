@@ -13,13 +13,15 @@ if ($_SESSION['logado'] == false){
 	<title>Tabela de Horários</title>
 </head>
 <body>
-	<h1>Bem-Vinda, <?php echo $_SESSION['usuario']; ?></h1>
+	<!--<h1>Bem-Vinda, <?php //echo $_SESSION['usuario']; ?></h1>-->
 	<h2>Tabela de Horários</h2>
 	<table class="quadrado" border="1">
 		<tr>
 			<th>Nome</th>
+			<th>Parada de Origem</th>
+			<th>Parada de Destino</th>
 			<th>Horário</th>
-			<th>Ônibus</th>
+			
 		</tr>
 
 
@@ -36,12 +38,16 @@ if ($_SESSION['logado'] == false){
 		while ($dados = mysqli_fetch_assoc($resultado)){
 			$id = $dados['usuarios_id'];
 			$nome= $dados['nome'];
+			$paradaorigem= $dados['paradaorigem'];
+			$paradadestino= $dados['paradadestino'];
 			$horario = $dados['horario'];
-			$onibus = $dados['onibus'];
+			
 			echo "<tr>
 			<td> ".$nome."</td>
+			<td> ".$paradaorigem."</td>
+			<td> ".$paradadestino."</td>
 			<td>".$horario."</td> 
-			<td>".$onibus."</td> 
+			
 			</tr>";
 			?>
 			<?php

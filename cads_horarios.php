@@ -8,6 +8,8 @@
 	<?php $id = $_GET['id']; ?>
 	<form action="processa_horario.php?id=<?=$id?>" method="POST">
 		Nome:<input type="text" name="nome" placeholder="Nome"><br><br>
+    Parada de Origem<input type="text" name="paradaorigem" placeholder="Parada de Origem"><br><br>
+    Parada de Destino<input type="text" name="paradadestino" placeholder="Parada de Destino"><br><br>
 		Horário:<select name="horario">
   			<option value="00:00 - 00:30">00:00 - 00:30</option>
   			<option value="01:00 - 01:30">01:00 - 01:30</option>
@@ -34,10 +36,10 @@
   			<option value="22:00 - 22:30">22:00 - 22:30</option>
   			<option value="23:00 - 23:30">23:00 - 23:30</option>
 		</select><br><br>
-		<input type="text" name="onibus" placeholder="Linha de Ônibus">
-		<input type="submit" value="enviar">
+		<input type="submit" value="Enviar">
 
 	</form>
 	<a href="tabelahorarios.php"></a> 
+  <button class="button" onclick="window.location='mapa.php'">Voltar</button>
 </body>
 </html>

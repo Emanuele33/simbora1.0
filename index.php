@@ -1,16 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Login</title>
+	<title>Simbora</title>
 </head>
 <body>
-  <form action="processa_login.php" method="POST">
-    <input type="text" name="login" placeholder="Login">
-    <input type="password" name="senha" placeholder="Senha">
-    <input type="submit" value="Logar">
-  </form>
-<a href="cads_usuario.php">Cadastro de Usuários</a><br>
-
-
+	<h1>Simbora</h1>
+	<a href="cads_usuario.php">Cadastre-se</a>
+	<a href="login.php">Login</a>
+	
+	
 </body>
 </html>

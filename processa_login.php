@@ -19,9 +19,9 @@ if ($consulta->rowCount() >= 1) {
 	$_SESSION['usuario'] = $login;
 	$_SESSION['logado'] = true;
 
-	header('location:tabelahorarios.php?id=' . $id);
+	header('location:mapa.php?id=' . $id);
 }else{
-	header('location:index.php'); 
+	header('location:login.php'); 
 }
 
 

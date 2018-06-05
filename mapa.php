@@ -1,3 +1,4 @@
+<?php $id = $_GET['id']; ?>
 <!DOCTYPE html >
   <head>
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
@@ -20,8 +21,8 @@
 
   <body>
     <div id="map"></div><br><br>
-    <a href="cads_lugar.php">Cadastrar sua Rotina</a>
-    <a href="cads_horarios.php">Cadastre seu Horário</a><br>
+    
+    <a href="cads_horarios.php?id=<?=$id?>">Cadastre seu Horário</a><br>
     <a href="sair.php">Sair</a>
 
 
