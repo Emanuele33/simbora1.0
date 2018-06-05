@@ -27,7 +27,7 @@ if ($_SESSION['logado'] == false){
 	</form><br>
 
 
-	<a href="tabelahorarios.php"><button class="button"><span>Voltar</span></button></a> <br><br>
+	<a href="tabelahorarios.php"></a> 
 
 </body>
 </html>

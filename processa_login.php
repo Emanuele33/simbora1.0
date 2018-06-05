@@ -21,7 +21,7 @@ if ($consulta->rowCount() >= 1) {
 
 	header('location:tabelahorarios.php?id=' . $id);
 }else{
-	header('location:index.php');
+	header('location:index.php'); 
 }
 
 
