@@ -47,7 +47,7 @@
 			<!-- Brand and toggle get grouped for better mobile display -->
 			<div class="navbar-header">
 				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
-				<a class="navbar-brand page-scroll" href="#page-top">Simbora</a> </div>
+				<a class="navbar-brand page-scroll" href="indexcss.php">Simbora</a> </div>
 
 				<!-- Collect the nav links, forms, and other content for toggling -->
 				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -64,17 +64,71 @@
 			<!-- /.container-fluid --> 
 		</nav>
 		<div class="container">
-		
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+	<div id="contact" class="text-center">
+		<div class="container">
+    			<div class="section-title center">
+      				<h2>Cadastre-se</h2>
+      					<hr>
+    			</div>
+		</div>
+		<div class="col-md-8 col-md-offset-2">
+
 	<form action="processa_usu.php" method="POST">
-		<input type="text" name="nome" placeholder="Nome">
-		<input type="text" name="sobrenome" placeholder="Sobrenome">
-		<input type="text" name="numero" placeholder="WhatsApp">
-		<input type="text" name="login" placeholder="Login">
-		<input type="password" name="senha" placeholder="Senha">
-		<input type="submit" value="Cadastrar">
+		<div class="row">
+          <div class="col-md-6">
+            <div class="form-group">
+				<input type="text" name="nome" class="form-control" placeholder="Nome" required="required">
+				<p class="help-block text-danger"></p>
+            </div>
+		 </div>
+          <div class="col-md-6">
+            <div class="form-group">	
+				<input type="text" name="sobrenome" class="form-control" placeholder="Sobrenome" required="required">
+				<p class="help-block text-danger"></p>
+        	</div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group">	
+				<input type="text" name="numero" class="form-control" placeholder="WhatsApp" required="required">
+				<p class="help-block text-danger"></p>
+            </div>
+          </div>
+		  <div class="col-md-6">
+            <div class="form-group">
+				<input type="text" name="login" placeholder="Login" class="form-control" required="required">
+				<p class="help-block text-danger"></p>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group">
+				<input type="password" name="senha" class="form-control" placeholder="Senha" required="required">
+				<p class="help-block text-danger"></p>
+            </div>
+          </div>
+        </div>
+           
+				<button type="submit" class="btn btn-custom btn-lg">Cadastrar</button>
+				<br>
+				<br>
+				<a href="logincss.php">Fazer Login</a>
+      
+					<!--<input type="submit" value="Cadastrar">-->
 	</form>
-	<a href="login.php">Faça Login</a>
 	<br>
-	<button class="button" onclick="window.location='index.php'">Voltar</button>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<a href="indexcss.php" onclick="window.location='indexcss.php'">Voltar</a>
 </body>
 </html>

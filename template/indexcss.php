@@ -71,7 +71,7 @@
             <h1>Simbora</h1>
             <p>Lorem ipsum dolor sit amet consectetur adipiscing. <br>
               Duis sed dapibus leo nec ornare diam.</p>
-            <a href="#about" class="btn btn-custom btn-lg page-scroll" style="width: 40%">Cadastre-se</a> 
+            <a href="cads_usuariocss.php" class="btn btn-custom btn-lg page-scroll" style="width: 40%">Cadastre-se</a> 
             <a href="logincss.php" class="btn btn-custom btn-lg page-scroll" style="width: 40%; float: right">Login</a>
           </div>
         </div>

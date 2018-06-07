@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Cadastro de Usuários</title>
+	<title>Login</title>
 	<!-- Favicons
 	================================================== -->
 	<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
@@ -37,7 +37,6 @@
 			text-transform: uppercase;
 			}
 	</style>
-	
 </head>
 <body>
 <!-- Navigation
@@ -64,17 +63,82 @@
 			<!-- /.container-fluid --> 
 		</nav>
 		<div class="container">
-		
-	<form action="processa_usu.php" method="POST">
-		<input type="text" name="nome" placeholder="Nome">
-		<input type="text" name="sobrenome" placeholder="Sobrenome">
-		<input type="text" name="numero" placeholder="WhatsApp">
-		<input type="text" name="login" placeholder="Login">
-		<input type="password" name="senha" placeholder="Senha">
-		<input type="submit" value="Cadastrar">
-	</form>
-	<a href="login.php">Faça Login</a>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<div id="contact" class="text-center">
+  			<div class="container">
+    			<div class="section-title center">
+      				<h2>Login</h2>
+      				 <hr>
+    			</div>
+			</div>
+			<div class="col-md-8 col-md-offset-2">
+      
+      <!--<form name="sentMessage" id="contactForm" novalidate>-->
+
+      <form action="processa_login.php" method="POST">
+        
+        <div class="row">
+          <div class="col-md-6">
+            <div class="form-group">
+              
+              <!--<input type="text" id="name" class="form-control" placeholder="Login" required="required">-->
+
+              <input type="text" name="login" class="form-control" placeholder="Login" required="required">
+
+              <p class="help-block text-danger"></p>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group">
+              
+              <!--<input type="password" id="email" class="form-control" placeholder="Senha" required="required">-->
+              
+              <input type="password" name="senha" class="form-control" placeholder="Senha" required="required">
+
+              <p class="help-block text-danger"></p>
+            </div>
+          </div>
+        </div>
+        <!--<div class="form-group">
+          <textarea name="message" id="message" class="form-control" rows="4" placeholder="Message" required></textarea>
+          <p class="help-block text-danger"></p>
+        </div>
+        <div id="success"></div>-->
+        <button type="submit" class="btn btn-custom btn-lg">Entrar</button>
+      </form>
+
+      	<a href="cads_usuariocss.php">Não sou Cadastrado</a>
+      		<br>
 	<br>
-	<button class="button" onclick="window.location='index.php'">Voltar</button>
-</body>
-</html>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+      	<a onclick="window.location='indexcss.php'">Voltar</a>
+
+
+      <!--<div class="social">
+        <ul>
+          <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+          <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+          <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+          <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+        </ul>
+      </div>-->
+    </div>
+	</body>
+	</html>
