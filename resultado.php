@@ -1,33 +1,45 @@
-<?php 
-include 'conexao.php';
-session_start();
-$id = $_GET['id'];
-$usuarios_id = $id;
-$hora_segunda = $_POST['hora_segunda'];
-$hora_terca = $_POST['hora_terca'];
-$hora_quarta = $_POST['hora_quarta'];
-$hora_quinta = $_POST['hora_quinta'];
-$hora_sexta = $_POST['hora_sexta'];
-$hora_sabado = $_POST['hora_sabado'];
-$hora_domingo = $_POST['hora_domingo'];
+<?php
+require("conexao.php");
 
-
-$consulta = $conn->prepare("INSERT INTO tabela_horarios(hora_segunda,hora_terca,hora_quarta,hora_quinta,hora_sexta,hora_sabado,hora_domingo,usuarios_id) VALUES(?,?,?,?,?,?,?,?)");
-
-$consulta->bindParam(1,$hora_segunda);
-$consulta->bindParam(2,$hora_terca);
-$consulta->bindParam(3,$hora_quarta);
-$consulta->bindParam(4,$hora_quinta);
-$consulta->bindParam(5,$hora_sexta);
-$consulta->bindParam(6,$hora_sabado);
-$consulta->bindParam(7,$hora_domingo);
-$consulta->bindParam(8,$usuarios_id);
-if ($consulta->execute()){
-	echo "Salvo no banco";
-}else{
-	echo "Erro";
+function parseToXML($htmlStr){
+	$xmlStr=str_replace('<','&lt;',$htmlStr);
+	$xmlStr=str_replace('>','&gt;',$xmlStr);
+	$xmlStr=str_replace('"','&quot;',$xmlStr);
+	$xmlStr=str_replace("'",'&#39;',$xmlStr);
+	$xmlStr=str_replace("&",'&amp;',$xmlStr);
+	return $xmlStr;
 }
 
-//header('location:tabelahorarios.php');
+// Select all the rows in the markers table
+$consulta = "SELECT * FROM markers";
 
-?>
+$resultado = $conn->query($consulta)->fetchAll();
+
+if(!$resultado) {
+  print_r($conn->errorInfo());
+}
+
+//$conn = mysqli_query($conn, $consulta);
+
+header("Content-type: text/xml");
+
+// Start XML file, echo parent node
+echo '<markers>';
+
+// Iterate through the rows, printing XML nodes for each
+foreach ($resultado as $marcador) {
+  // Add to XML document node
+  echo '<marker ';
+  echo 'name="' . parseToXML($marcador['name']) . '" ';
+  echo 'address="' . parseToXML($marcador['address']) . '" ';
+  echo 'lat="' . $marcador['lat'] . '" ';
+  echo 'lng="' . $marcador['lng'] . '" ';
+  echo 'type="' . $marcador['type'] . '" ';
+  echo '/>';
+}
+
+// End XML file
+echo '</markers>';
+
+
+

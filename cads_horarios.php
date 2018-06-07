@@ -135,6 +135,6 @@
 
 	</form>
 	<a href="tabelahorarios.php"></a> 
-  <button class="button" onclick="window.location='mapa.php'">Voltar</button>
+  <button class="button" onclick="window.location='mapa.php?id=<?=$id?>'">Voltar</button>
 </body>
 </html>

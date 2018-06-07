@@ -57,6 +57,7 @@ if ($_SESSION['logado'] == false){
 		
 		<a href="cads_horarios.php?id=<?=$_GET['id']?>">Cadastre seu Horário</a><br> 
 		<a href="cads_lugar.php?id=<?=$_GET['id']?>">Cadastre sua Rotina</a><br>
+		<button class="button" onclick="window.location='cads_horarios.php?id=<?=$_GET['id']?>'">Voltar</button><br><br>
 		<a href="sair.php">Sair</a><br>
 	</table>
 	<br>
