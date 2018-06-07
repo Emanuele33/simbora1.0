@@ -23,20 +23,21 @@
     <div id="map"></div><br><br>
     
     <a href="cads_horarios.php?id=<?=$id?>">Cadastre seu Horário</a><br>
+    <a href="cads_lugar.php?id=<?=$id?>">Cadastre sua Rotina</a><br>
     <a href="sair.php">Sair</a>
 
 
     
 
     <script>
-      var customLabel = {
+      /*var customLabel = {
         restaurant: {
           label: 'R'
         },
         bar: {
           label: 'B'
         }
-      };
+      };*/
 
         function initMap() {
         var map = new google.maps.Map(document.getElementById('map'), {
@@ -66,11 +67,11 @@
               var text = document.createElement('text');
               text.textContent = address
               infowincontent.appendChild(text);
-              var icon = customLabel[type] || {};
+              //var icon = customLabel['R'] || {};
               var marker = new google.maps.Marker({
                 map: map,
                 position: point,
-                label: icon.label
+                //label: icon.label
               });
               marker.addListener('click', function() {
                 infoWindow.setContent(infowincontent);

@@ -1,15 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.7.4
--- https://www.phpmyadmin.net/
+-- version 4.5.0.2
+-- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: 31-Maio-2018 às 18:41
--- Versão do servidor: 10.1.26-MariaDB
--- PHP Version: 7.1.9
+-- Generation Time: 05-Jun-2018 às 20:22
+-- Versão do servidor: 10.0.17-MariaDB
+-- PHP Version: 5.6.14
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
-START TRANSACTION;
 SET time_zone = "+00:00";
 
 
@@ -38,6 +36,14 @@ CREATE TABLE `markers` (
   `destino` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Extraindo dados da tabela `markers`
+--
+
+INSERT INTO `markers` (`id`, `name`, `address`, `diasemana`, `horariosaida`, `horariovolta`, `destino`) VALUES
+(1, 'loja', 'IFPE', 'TerÃ§a', '12:00:00.000000', '17:40:00.000000', 'Restaurante E Pizzaria Braseiro'),
+(2, 'loja', 'IFPE', 'TerÃ§a', '12:00:00.000000', '17:40:00.000000', 'Restaurante E Pizzaria Braseiro');
+
 -- --------------------------------------------------------
 
 --
@@ -46,13 +52,8 @@ CREATE TABLE `markers` (
 
 CREATE TABLE `tabela_horarios` (
   `id` int(11) NOT NULL,
-  `hora_segunda` varchar(50) NOT NULL,
-  `hora_terca` varchar(50) NOT NULL,
-  `hora_quarta` varchar(50) NOT NULL,
-  `hora_quinta` varchar(50) NOT NULL,
-  `hora_sexta` varchar(50) NOT NULL,
-  `hora_sabado` varchar(50) NOT NULL,
-  `hora_domingo` varchar(50) NOT NULL,
+  `nome` varchar(50) NOT NULL,
+  `horario` varchar(50) NOT NULL,
   `usuarios_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -60,10 +61,8 @@ CREATE TABLE `tabela_horarios` (
 -- Extraindo dados da tabela `tabela_horarios`
 --
 
-INSERT INTO `tabela_horarios` (`id`, `hora_segunda`, `hora_terca`, `hora_quarta`, `hora_quinta`, `hora_sexta`, `hora_sabado`, `hora_domingo`, `usuarios_id`) VALUES
-(11, '12:00', '13:00', '14:00', '15:00', '16:00', '17:00', '18:00', 8),
-(13, '23:00', '12:00', '13:00', '14:00', '15:50', '17:40', '16:10', 9),
-(25, '12:00', '12:01', '10:00', '13:00', '04:00', '05:54', '05:45', 9);
+INSERT INTO `tabela_horarios` (`id`, `nome`, `horario`, `usuarios_id`) VALUES
+(32, 'Manu', '12:00 - 12:30', 8);
 
 -- --------------------------------------------------------
 
@@ -87,7 +86,8 @@ INSERT INTO `usuarios` (`id`, `nome`, `sobrenome`, `login`, `senha`) VALUES
 (8, 'Emanuele', 'Garcia', 'manu', '123'),
 (9, 'Rhaiza', 'Aguiar', 'rhai', '1234'),
 (10, 'Maria', 'Eduarda', 'duda', '12345'),
-(12, 'Miriam', 'Garcia', 'Miriam', 'oioi');
+(12, 'Miriam', 'Garcia', 'Miriam', 'oioi'),
+(13, 'nunito', 'd', 'oii', '123');
 
 --
 -- Indexes for dumped tables
@@ -120,20 +120,17 @@ ALTER TABLE `usuarios`
 -- AUTO_INCREMENT for table `markers`
 --
 ALTER TABLE `markers`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
-
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 --
 -- AUTO_INCREMENT for table `tabela_horarios`
 --
 ALTER TABLE `tabela_horarios`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
-
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
 --
 -- AUTO_INCREMENT for table `usuarios`
 --
 ALTER TABLE `usuarios`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
-
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 --
 -- Constraints for dumped tables
 --
@@ -143,7 +140,6 @@ ALTER TABLE `usuarios`
 --
 ALTER TABLE `tabela_horarios`
   ADD CONSTRAINT `usuarios` FOREIGN KEY (`usuarios_id`) REFERENCES `usuarios` (`id`);
-COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
