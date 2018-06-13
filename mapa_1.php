@@ -9,6 +9,17 @@
        * element that contains the map. */
       #map {
         height: 80%;
+        padding: 10px 0 0;
+        clear: both;
+        margin-left: 400px;
+        margin-top: 70px;
+      }
+      #a{
+        height: 80%;
+        padding: 10px 0 0;
+        clear: both;
+        margin-left: 80px;
+        margin-top: -500px;
       }
       /* Optional: Makes the sample page fill the window. */
       html, body {
@@ -20,14 +31,13 @@
   </head>
 
   <body>
+    <?php include_once "menu.php" ?>
     <div id="map"></div><br><br>
-    
-    <a href="cads_horarios.php?id=<?=$id?>">Cadastre seu Horário</a><br>
-    <a href="cads_lugar.php?id=<?=$id?>">Cadastre sua Rotina</a><br>
-    <a href="sair.php">Sair</a>
-
-
-    
+    <div id="a"> 
+      <a href="cads_horarios.php?id=<?=$id?>" class="btn btn-custom btn-lg">Cadastre seu Horário</a><br>
+      <a href="cads_lugar.php?id=<?=$id?>" class="btn btn-custom btn-lg">Cadastre sua Rotina</a><br>
+      <a href="sair.php" class="btn btn-custom btn-lg" style="margin-left: 70px;">Sair</a>
+    </div>
 
     <script>
       /*var customLabel = {

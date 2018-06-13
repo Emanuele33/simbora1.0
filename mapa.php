@@ -1,12 +1,18 @@
-<<<<<<< HEAD
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <title>Calcular distancia entre cidades (mapas e rotas)</title>
     <script src="http://code.jquery.com/jquery-1.8.1.js" type="text/javascript"></script>
-</head>
-<body>
+    <style type="text/css">
+      #forms{
+        margin-left: 50px;
+      }
+    </style>
+    <!-- =======================================================-->
+  </head>
+  <body>
+        <?php include_once "menu.php" ?>
     <!-- Parâmetro sensor é utilizado somente em dispositivos com GPS -->
     <script src="http://maps.google.com/maps/api/js?sensor=false"></script>
     <script type="text/javascript">
@@ -50,7 +56,7 @@
             }
 =======
 <?php $id = $_GET['id']; ?>
-<!DOCTYPE html >
+/*<!DOCTYPE html >
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
@@ -82,7 +88,7 @@
     <style>
       /* Always set the map height explicitly to define the size of the div
       * element that contains the map. */
-      #map {
+/*      #map {
         margin-top: 100px;
         height: 80%;
         right: 40%;
@@ -90,7 +96,7 @@
         margin-right:210px;
       }
       /* Optional: Makes the sample page fill the window. */
-      html, body {
+/*      html, body {
         height: 100%;
         margin: 0;
         padding: 0;
@@ -192,14 +198,22 @@
 >>>>>>> 7307e9710ed804970ba6e5ec2b56d7319788dcba
         }
     </script>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
     <table width="100%" cellspacing="0" cellpadding="0" border="0">
         <tbody>
                 <?php $id = $_GET['id']; ?>
     <form action="processa_horario.php?id=<?=$id?>" method="POST">
-        Nome:<input type="text" name="nome" placeholder="Nome"><br><br>
-        Parada de Origem<input type="text" name="paradaorigem"  id="txtOrigem" class="field" style="width: 400px" placeholder="Parada de Origem"><br><br>
-        Parada de Destino<input type="text" name="paradadestino"  style="width: 400px" class="field" id="txtDestino" placeholder="Parada de Destino"><br><br>
-        Horário:<select name="horario">
+      <div id="forms">
+        Nome:  <input type="text" name="nome" placeholder="Nome"><br><br>
+
+        Parada de Origem:  <input type="text" name="paradaorigem"  id="txtOrigem" class="field" style="width: 400px" placeholder="Parada de Origem"><br><br>
+        Parada de Destino:  <input type="text" name="paradadestino"  style="width: 400px" class="field" id="txtDestino" placeholder="Parada de Destino"><br><br>
+        Horário:  <select name="horario">
             <option value="00:00 - 00:15">00:00 - 00:15</option>
             <option value="00:15 - 00:30">00:15 - 00:30</option>
             <option value="00:30 - 00:45">00:30 - 00:45</option>
@@ -215,7 +229,7 @@
             <option value="02:30 - 02:45">02:30 - 02:45</option>
             <option value="02:45 - 03:00">02:45 - 03:00</option>
 
-<<<<<<< HEAD
+
             <option value="03:00 - 03:15">03:00 - 03:15</option>
             <option value="03:15 - 03:30">03:15 - 03:30</option>
             <option value="03:30 - 03:45">03:30 - 03:45</option>
@@ -321,8 +335,10 @@
             <option value="23:30 - 23:45">23:30 - 23:45</option>
             <option value="23:45 - 00:00">23:45 - 00:00</option>
         </select><br><br>
-              <input type="button" value="Calcular dist&acirc;ncia" onclick="CalculaDistancia()" class="btnNew" />
-                <input type="submit" value="Enviar">
+              <!--<input type="button" value="Calcular dist&acirc;ncia" onclick="CalculaDistancia()" class="btnNew" />-->
+              <button type="button" class="btn btn-custom btn-lg" onclick="CalculaDistancia()">Calcular distância</button>
+                <!--<input type="submit" value="Enviar">-->
+                <button type="submit" class="btn btn-custom btn-lg">Enviar</button>
             <!--<tr>
                 <td>
                     <label for="txtOrigem"><strong>Endere&ccedil;o de origem</strong></label>
@@ -342,15 +358,15 @@
                     <input type="button" value="Calcular dist&acirc;ncia" onclick="CalculaDistancia()" class="btnNew" />
                 </td>
             </tr> -->
-                
+      </div>          
     </form>
         </tbody>
     </table>
     <div><span id="litResultado">&nbsp;</span></div>
-    <div style="padding: 10px 0 0; clear: both">
+    <div style="padding: 10px 0 0; clear: both; margin-left: 600px; margin-top: -200px">
         <iframe width="750" scrolling="no" height="350" frameborder="0" id="map" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?saddr=são paulo&daddr=rio de janeiro&output=embed"></iframe>
     </div>
-=======
+<!--=======
         function downloadUrl(url, callback) {
           var request = window.ActiveXObject ?
           new ActiveXObject('Microsoft.XMLHTTP') :
@@ -367,7 +383,7 @@
           request.send(null);
         }
 
-        function doNothing() {}
+        function doNothing() {} -->
     </script>
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA3frGfKLCczK2SjrxuYMrJg5O_LL45boA&callback=initMap">
     </script>
