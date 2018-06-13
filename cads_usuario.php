@@ -77,6 +77,6 @@
 		</form>
 		<br>
 
-		<a href="index.php" onclick="window.location='indexcss.php'">Voltar</a>
+		<a href="index.php" onclick="window.location='index.php'">Voltar</a>
 </body>
 </html>
