@@ -41,8 +41,8 @@
 						<ul class="nav navbar-nav navbar-right">
 							<li><a href="#about" class="page-scroll">Sobre</a></li>
 							<li><a href="#services" class="page-scroll">Serviços</a></li>
-        					<!--<li><a href="#portfolio" class="page-scroll">Gallery</a></li>
-        					<li><a href="#testimonials" class="page-scroll">Testimonials</a></li>-->
+        					<!--<li><a href="#portfolio" class="page-scroll">Gallery</a></li>-->
+        					<li><a href="#testimonials" class="page-scroll">Desenvolvedores</a></li>
         					<li><a href="#contact" class="page-scroll">Fale Conosco</a></li>
     					</ul>
 					</div>
@@ -284,10 +284,10 @@
 	</div>
 </div>
 <!-- Testimonials Section -->
-<!-- <div id="testimonials" class="text-center">
+ <div id="testimonials" class="text-center">
   <div class="container">
     <div class="section-title">
-      <h2>Testimonials</h2>
+      <h2>Desenvolvedores</h2>
       <hr>
     </div>
     <div class="row">
@@ -303,13 +303,21 @@
           </div>
           <div class="item"> <img src="img/clients/03.jpg" alt=""/>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam. Sed commodo nibh ante facilisis bibendum dolor feugiat at duis sed dapibus leo nec ornare diam.</p>
+            <p><strong>Jenny DOE</strong>, CEO, Company.</p>
+          </div>
+          <div class="item"> <img src="img/clients/02.jpg" alt=""/>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam. Sed commodo nibh ante facilisis bibendum dolor feugiat at duis sed dapibus leo nec ornare diam.</p>
+            <p><strong>Jenny DOE</strong>, CEO, Company.</p>
+          </div>
+          <div class="item"> <img src="img/clients/03.jpg" alt=""/>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam. Sed commodo nibh ante facilisis bibendum dolor feugiat at duis sed dapibus leo nec ornare diam.</p>
             <p><strong>John DOE</strong>, CEO, Company.</p>
           </div>
         </div>
       </div>
     </div>
   </div>
-</div> -->
+</div> 
 	<!-- Contact Section -->
 	<div id="contact" class="text-center">
 		<div class="container">
