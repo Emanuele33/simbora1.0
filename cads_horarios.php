@@ -8,7 +8,7 @@
 	<?php $id = $_GET['id']; ?>
 	<form action="processa_horario.php?id=<?=$id?>" method="POST">
 		Nome:<input type="text" name="nome" placeholder="Nome"><br><br>
-    Parada de Origem<input type="text" name="paradaorigem" placeholder="Parada de Origem"><br><br>
+    Parada de Origem<input type="text" name="paradaorigem" id="txtOrigem"><br><br>
     Parada de Destino<input type="text" name="paradadestino" placeholder="Parada de Destino"><br><br>
 		Horário:<select name="horario">
  			<option value="00:00 - 00:15">00:00 - 00:15</option>
