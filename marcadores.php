@@ -1,3 +1,4 @@
+<!-- Página apois logar -->
 <?php $id = $_GET['id']; ?>
 <!DOCTYPE html >
   <head>
@@ -34,8 +35,8 @@
     <?php include_once "menu.php" ?>
     <div id="map"></div><br><br>
     <div id="a"> 
-      <a href="cads_horarios.php?id=<?=$id?>" class="btn btn-custom btn-lg">Cadastre seu Horário</a><br>
-      <a href="cads_lugar.php?id=<?=$id?>" class="btn btn-custom btn-lg">Cadastre sua Rotina</a><br>
+      <a href="cads_lugar.php?id=<?=$id?>" class="btn btn-custom btn-lg">Cadastre seu Local</a><br>
+      <a href="mapa.php?id=<?=$id?>" class="btn btn-custom btn-lg">Veja sua Rota</a><br>
       <a href="sair.php" class="btn btn-custom btn-lg" style="margin-left: 70px;">Sair</a>
     </div>
 

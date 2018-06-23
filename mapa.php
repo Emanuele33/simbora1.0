@@ -9,7 +9,6 @@
         margin-left: 50px;
       }
     </style>
-    <!-- =======================================================-->
   </head>
   <body>
         <?php include_once "menu.php" ?>
@@ -54,9 +53,8 @@
                 //Atualizar o mapa
                 $("#map").attr("src", "https://maps.google.com/maps?saddr=" + response.originAddresses + "&daddr=" + response.destinationAddresses + "&output=embed");
             }
-<<<<<<< HEAD
-=======
-=======
+          }
+
 <?php $id = $_GET['id']; ?>
 /*<!DOCTYPE html >
   <head>
@@ -157,49 +155,7 @@
         }
       };*/
 
-      function initMap() {
-        var map = new google.maps.Map(document.getElementById('map'), {
-          center: new google.maps.LatLng(-7.840372, -34.909090),
-          zoom: 5
-        });
-        var infoWindow = new google.maps.InfoWindow;
 
-          // Change this depending on the name of your PHP or XML file
-          downloadUrl('resultado.php', function(data) {
-            var xml = data.responseXML;
-            var markers = xml.documentElement.getElementsByTagName('marker');
-            Array.prototype.forEach.call(markers, function(markerElem) {
-              var name = markerElem.getAttribute('name');
-              var address = markerElem.getAttribute('address');
-              var destino = markerElem.getAttribute('destino');
-              var point = new google.maps.LatLng(
-                parseFloat(markerElem.getAttribute('lat')),
-                parseFloat(markerElem.getAttribute('lng')));
-
-              var infowincontent = document.createElement('div');
-              var strong = document.createElement('strong');
-              strong.textContent = name
-              infowincontent.appendChild(strong);
-              infowincontent.appendChild(document.createElement('br'));
-
-              var text = document.createElement('text');
-              text.textContent = address
-              infowincontent.appendChild(text);
-              //var icon = customLabel['R'] || {};
-              var marker = new google.maps.Marker({
-                map: map,
-                position: point,
-                //label: icon.label
-              });
-              marker.addListener('click', function() {
-                infoWindow.setContent(infowincontent);
-                infoWindow.open(map, marker);
-              });
-            });
-          });
->>>>>>> 7307e9710ed804970ba6e5ec2b56d7319788dcba
->>>>>>> dcf6b2a35e7b0727518175c527341fd14ad4ff7b
-        }
     </script>
     <br>
     <br>
@@ -210,19 +166,17 @@
     <table width="100%" cellspacing="0" cellpadding="0" border="0">
         <?php $id = $_GET['id']; ?>
     <form action="processa_horario.php?id=<?=$id?>" method="POST">
-<<<<<<< HEAD
         Nome:<input type="text" name="nome" placeholder="Nome"><br><br>
         Parada de Origem<input type="text" name="paradaorigem" id="txtOrigem" placeholder="Parada de Origem"><br><br>
         Parada de Destino<input type="text" name="paradadestino" id="txtDestino" placeholder="Parada de Destino"><br><br>
         Horário:<select name="horario">
-=======
-      <div id="forms">
+
+      <!--<div id="forms">
         Nome:  <input type="text" name="nome" placeholder="Nome"><br><br>
 
         Parada de Origem:  <input type="text" name="paradaorigem"  id="txtOrigem" class="field" style="width: 400px" placeholder="Parada de Origem"><br><br>
         Parada de Destino:  <input type="text" name="paradadestino"  style="width: 400px" class="field" id="txtDestino" placeholder="Parada de Destino"><br><br>
-        Horário:  <select name="horario">
->>>>>>> dcf6b2a35e7b0727518175c527341fd14ad4ff7b
+        Horário:  <select name="horario"> !-->
             <option value="00:00 - 00:15">00:00 - 00:15</option>
             <option value="00:15 - 00:30">00:15 - 00:30</option>
             <option value="00:30 - 00:45">00:30 - 00:45</option>
@@ -238,10 +192,7 @@
             <option value="02:30 - 02:45">02:30 - 02:45</option>
             <option value="02:45 - 03:00">02:45 - 03:00</option>
 
-<<<<<<< HEAD
-=======
 
->>>>>>> dcf6b2a35e7b0727518175c527341fd14ad4ff7b
             <option value="03:00 - 03:15">03:00 - 03:15</option>
             <option value="03:15 - 03:30">03:15 - 03:30</option>
             <option value="03:30 - 03:45">03:30 - 03:45</option>
@@ -347,18 +298,18 @@
             <option value="23:30 - 23:45">23:30 - 23:45</option>
             <option value="23:45 - 00:00">23:45 - 00:00</option>
         </select><br><br>
-<<<<<<< HEAD
-        <input type="button" value="Calcular dist&acirc;ncia" onclick="CalculaDistancia()" class="btnNew" />
-        <input type="submit" value="Enviar">
-
+       <input type="button" value="Calcular dist&acirc;ncia" onclick="CalculaDistancia()" class="btnNew" />
+       <input type="submit" name="Cadastrar Rotas" class="btnNew">
+        
+       <a href="tabelahorarios.php?id=<?=$id?>">Ver Horários</a>
     </form>
         <!--<tbody>
             <tr>
-=======
-              <!--<input type="button" value="Calcular dist&acirc;ncia" onclick="CalculaDistancia()" class="btnNew" />-->
-              <button type="button" class="btn btn-custom btn-lg" onclick="CalculaDistancia()">Calcular distância</button>
+
+              <input type="button" value="Calcular dist&acirc;ncia" onclick="CalculaDistancia()" class="btnNew" />
+              <!--<button type="button" class="btn btn-custom btn-lg" onclick="CalculaDistancia()">Calcular distância</button>-->
                 <!--<input type="submit" value="Enviar">-->
-                <button type="submit" class="btn btn-custom btn-lg">Enviar</button>
+               
             <!--<tr>
 >>>>>>> dcf6b2a35e7b0727518175c527341fd14ad4ff7b
                 <td>
@@ -381,19 +332,17 @@
 <<<<<<< HEAD
             </tr>
         </tbody>-->
-=======
-            </tr> -->
+
+            </tr> 
       </div>          
     </form>
         </tbody>
->>>>>>> dcf6b2a35e7b0727518175c527341fd14ad4ff7b
     </table>
     <div><span id="litResultado">&nbsp;</span></div>
     <div style="padding: 10px 0 0; clear: both; margin-left: 600px; margin-top: -200px">
         <iframe width="750" scrolling="no" height="350" frameborder="0" id="map" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?saddr=são paulo&daddr=rio de janeiro&output=embed"></iframe>
-<<<<<<< HEAD
+ 
     </div>
-=======
     </div>
 <!--=======
         function downloadUrl(url, callback) {
@@ -419,5 +368,3 @@
   </div>
 </body>
 </html>
->>>>>>> 7307e9710ed804970ba6e5ec2b56d7319788dcba
->>>>>>> dcf6b2a35e7b0727518175c527341fd14ad4ff7b

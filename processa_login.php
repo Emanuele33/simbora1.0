@@ -19,7 +19,7 @@ if ($consulta->rowCount() >= 1) {
 	$_SESSION['usuario'] = $login;
 	$_SESSION['logado'] = true;
 
-	header('location:mapa.php?id=' . $id);
+	header('location:marcadores.php?id=' . $id);
 }else{
 	header('location:login.php'); 
 }
