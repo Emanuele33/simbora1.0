@@ -31,7 +31,7 @@ if ($_SESSION['logado'] == false){
 		$senha = "";
 		$host = "localhost";
 		$strcon = mysqli_connect($host,$usuario,$senha,$dbname) or die('Erro ao conectar ao banco!');
-		$sql = "SELECT * FROM tabela_horarios";
+		$sql = "SELECT * FROM tabela_horarios WHERE paradadestino = 'ifpe'";
 		$resultado = mysqli_query($strcon, $sql) or die('Erro ao tentar cadastrar registro');
 // $name = mysqli_query($strcon, "SELECT hora_segunda,hora_terca,hora_quarta,hora_quinta,hora_sexta,hora_sabado,hora_domingo,usuarios_id  FROM tabela_horarios") or die(mysqli_error($strcon));
 // $re = mysqli_fetch_array($name);
@@ -55,8 +55,8 @@ if ($_SESSION['logado'] == false){
 		mysqli_close($strcon);
 		?>
 		
-		<a href="cads_horarios.php?id=<?=$_GET['id']?>">Cadastre seu Horário</a><br> 
-		<a href="cads_lugar.php?id=<?=$_GET['id']?>">Cadastre sua Rotina</a><br>
+		<a href="mapa.php?id=<?=$_GET['id']?>">Veja sua Rota</a><br> 
+		<a href="marcadores.php?id=<?=$_GET['id']?>">Cadastre seu Local</a><br>
 		<button class="button" onclick="window.location='cads_horarios.php?id=<?=$_GET['id']?>'">Voltar</button><br><br>
 		<a href="sair.php">Sair</a><br>
 	</table>

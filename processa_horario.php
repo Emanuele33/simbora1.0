@@ -18,7 +18,7 @@ $consulta->bindParam(3,$paradadestino);
 $consulta->bindParam(4,$horario);
 $consulta->bindParam(5,$usuarios_id);
 if ($consulta->execute()){
-	header('location:mapa.php?id=' . $id);
+	header('location:tabelahorarios.php?id=' . $id);
 }else{
 	echo "Erro";
 }

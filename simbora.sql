@@ -1,13 +1,15 @@
 -- phpMyAdmin SQL Dump
--- version 4.5.0.2
--- http://www.phpmyadmin.net
+-- version 4.7.7
+-- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: 18-Jun-2018 às 21:30
--- Versão do servidor: 10.0.17-MariaDB
--- PHP Version: 5.6.14
+-- Generation Time: 28-Jun-2018 às 21:46
+-- Versão do servidor: 10.1.30-MariaDB
+-- PHP Version: 7.2.2
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
+START TRANSACTION;
 SET time_zone = "+00:00";
 
 
@@ -53,33 +55,23 @@ INSERT INTO `markers` (`id`, `name`, `address`, `diasemana`, `horariosaida`, `ho
 
 CREATE TABLE `tabela_horarios` (
   `id` int(11) NOT NULL,
-  `hora_segunda` time NOT NULL,
-  `hora_terca` time NOT NULL,
-  `hora_quarta` time NOT NULL,
-  `hora_quinta` time NOT NULL,
-  `hora_sexta` time NOT NULL,
-  `hora_sabado` time NOT NULL,
-  `hora_domingo` time NOT NULL
+  `nome` varchar(255) NOT NULL,
+  `paradaorigem` varchar(255) NOT NULL,
+  `paradadestino` varchar(255) NOT NULL,
+  `horario` time(6) NOT NULL,
+  `usuarios_id` int(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Extraindo dados da tabela `tabela_horarios`
 --
 
-INSERT INTO `tabela_horarios` (`id`, `hora_segunda`, `hora_terca`, `hora_quarta`, `hora_quinta`, `hora_sexta`, `hora_sabado`, `hora_domingo`) VALUES
-(1, '10:00:00', '10:00:00', '10:00:00', '10:01:00', '10:00:00', '10:00:00', '10:00:00'),
-(2, '05:00:00', '05:00:00', '05:00:00', '05:00:00', '05:00:00', '05:00:00', '05:00:00'),
-(3, '05:00:00', '05:00:00', '05:00:00', '05:00:00', '05:00:00', '05:00:00', '05:00:00'),
-(4, '05:00:00', '05:00:00', '05:00:00', '05:00:00', '05:00:00', '05:00:00', '05:00:00'),
-(5, '05:00:00', '05:00:00', '05:00:00', '05:00:00', '05:00:00', '05:00:00', '05:00:00'),
-(6, '05:00:00', '05:00:00', '05:00:00', '05:00:00', '05:00:00', '05:00:00', '05:00:00'),
-(7, '05:00:00', '05:00:00', '05:00:00', '05:00:00', '05:00:00', '05:00:00', '05:00:00'),
-(8, '05:00:00', '05:00:00', '05:00:00', '05:00:00', '05:00:00', '05:00:00', '05:00:00'),
-(9, '05:00:00', '05:00:00', '05:00:00', '05:00:00', '05:00:00', '05:00:00', '05:00:00'),
-(10, '05:00:00', '05:00:00', '05:00:00', '05:00:00', '05:00:00', '05:00:00', '05:00:00'),
-(11, '05:00:00', '05:00:00', '05:00:00', '05:00:00', '05:00:00', '05:00:00', '05:00:00'),
-(12, '17:40:00', '00:00:00', '00:00:00', '00:00:00', '00:00:00', '00:00:00', '00:00:00'),
-(13, '17:40:00', '00:00:00', '00:00:00', '00:00:00', '00:00:00', '00:00:00', '00:00:00');
+INSERT INTO `tabela_horarios` (`id`, `nome`, `paradaorigem`, `paradadestino`, `horario`, `usuarios_id`) VALUES
+(1, 'Rhai', 'Igarassu', 'IFPE', '00:15:00.000000', 1),
+(5, 'Maria', 'Pau Amarelo', 'Recife', '00:45:00.000000', 2),
+(6, 'Maria', 'Recife', 'IFPE', '00:15:00.000000', 2),
+(7, 'Rhai', 'Igarassu', 'Recife', '00:30:00.000000', 3),
+(8, 'Rhai', 'Igarassu', 'Recife', '00:15:00.000000', 3);
 
 -- --------------------------------------------------------
 
@@ -89,19 +81,21 @@ INSERT INTO `tabela_horarios` (`id`, `hora_segunda`, `hora_terca`, `hora_quarta`
 
 CREATE TABLE `usuarios` (
   `id` int(11) NOT NULL,
-  `nome` varchar(100) NOT NULL,
-  `sobrenome` varchar(100) NOT NULL,
-  `login` varchar(100) NOT NULL,
-  `senha` varchar(100) NOT NULL
+  `nome` varchar(255) NOT NULL,
+  `sobrenome` varchar(255) NOT NULL,
+  `numero` varchar(255) NOT NULL,
+  `login` varchar(255) NOT NULL,
+  `senha` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Extraindo dados da tabela `usuarios`
 --
 
-INSERT INTO `usuarios` (`id`, `nome`, `sobrenome`, `login`, `senha`) VALUES
-(1, 'Rhaiza', 'Aguiar', 'Rhai', '123'),
-(2, 'Rhaiza', 'Aguiar', 'Rhai', '123');
+INSERT INTO `usuarios` (`id`, `nome`, `sobrenome`, `numero`, `login`, `senha`) VALUES
+(1, 'Emanuele', 'Garcia', '123456789', 'Manu', '123'),
+(2, 'Maria', 'Eduarda', '123456789', 'Duda', '1234'),
+(3, 'Rhaiza', 'Aguiar', '546145644', 'Rhai', '123');
 
 --
 -- Indexes for dumped tables
@@ -134,16 +128,20 @@ ALTER TABLE `usuarios`
 --
 ALTER TABLE `markers`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
 --
 -- AUTO_INCREMENT for table `tabela_horarios`
 --
 ALTER TABLE `tabela_horarios`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+
 --
 -- AUTO_INCREMENT for table `usuarios`
 --
 ALTER TABLE `usuarios`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+COMMIT;
+
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
