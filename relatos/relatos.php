@@ -61,27 +61,50 @@
           	var xml = data.responseXML;
           	var markers = xml.documentElement.getElementsByTagName('marker');
           	Array.prototype.forEach.call(markers, function(markerElem) {
-          		var name = markerElem.getAttribute('name');
+          		// Cria atributos para o marcador
+              var name = markerElem.getAttribute('name');
           		var address = markerElem.getAttribute('address');
-          		var destino = markerElem.getAttribute('destino');
+              var content = markerElem.getAttribute('content');
+              var date = markerElem.getAttribute('date');
+          		var turno = markerElem.getAttribute('turno');
           		var point = new google.maps.LatLng(
           			parseFloat(markerElem.getAttribute('lat')),
           			parseFloat(markerElem.getAttribute('lng')));
 
           		var infowincontent = document.createElement('div');
-          		var strong = document.createElement('strong');
+          		
+              // Atribui o valor ao atributo
+              var strong = document.createElement('strong');
           		strong.textContent = name
-          		infowincontent.appendChild(strong);
-          		infowincontent.appendChild(document.createElement('br'));
+              infowincontent.appendChild(strong);
+              infowincontent.appendChild(document.createElement('br'));
 
-          		var text = document.createElement('text');
-          		text.textContent = address
-          		infowincontent.appendChild(text);
+              var text = document.createElement('text');
+              text.textContent = address
+              infowincontent.appendChild(text);
+              infowincontent.appendChild(document.createElement('br'));
               //var icon = customLabel['R'] || {};
+              var data = document.createElement('text');
+              data.textContent = date
+              infowincontent.appendChild(data);
+              infowincontent.appendChild(document.createElement('br'));
+              
+              
+              var turn = document.createElement('text');
+              turn.textContent = turno
+              infowincontent.appendChild(turn);
+              infowincontent.appendChild(document.createElement('br'));
+
+              var conteudo = document.createElement('text');
+              conteudo.textContent = content
+              infowincontent.appendChild(conteudo);
+              infowincontent.appendChild(document.createElement('br'));
+              
+
+
               var marker = new google.maps.Marker({
               	map: map,
-              	position: point,
-                //label: icon.label
+                position: point,
             });
               marker.addListener('click', function() {
               	infoWindow.setContent(infowincontent);

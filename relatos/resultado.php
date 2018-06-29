@@ -33,7 +33,10 @@ foreach ($resultado as $marcador) {
   // Add to XML document node
   echo '<marker ';
   echo 'name="' . parseToXML($marcador['name']) . '" ';
+  echo 'content="' . parseToXML($marcador['relato']) . '" ';
+  echo 'date="' . parseToXML($marcador['data']) . '" ';
   echo 'address="' . parseToXML($marcador['address']) . '" ';
+  echo 'turn="' . parseToXML($marcador['turno']) . '" ';
   echo 'lat="' . $marcador['lat'] . '" ';
   echo 'lng="' . $marcador['lng'] . '" ';
   echo 'type="' . $marcador['type'] . '" ';
@@ -48,3 +51,4 @@ echo '</markers>';
 
 
 
+?>
