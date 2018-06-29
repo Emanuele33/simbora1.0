@@ -1,0 +1,18 @@
+Colocando um nome e um dominio pelo apache2
+
+
+Para realizar esta configuração primeiramente entre no diretório do seu ubuntu /etc/apache2/sites-avaiable e 
+depois copie o arquivo 000-default.conf no mesmo diretório e troque o nome do arquivo para qual deseja. 
+Ápos fazer isto entre no arquivo(algumacoisa.conf) procure o #ServerName www.example.com remova o # <-- que indica que está --> 
+comentada a linha e coloque por exemplo [www.Simbora.com].
+
+Depois que vá em DocumentRoot coloque o caminho para a sua pasta do projeto como por exemplo /var/www/html/iasw/simbora1.0.
+
+Logo após feito isso vá ao diretório /etc/hosts.
+Entre no arquivo coloque no arquivo o IP e ao lado o nome do site.
+Como Por exemplo
+
+10.35.3.143		www.simbora.com
+
+*Curiosidades
+ Bem esta configuração irá funcionar localmente. Em cada maquina que você quiser, deverá executar esta mesma configuração.
