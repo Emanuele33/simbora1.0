@@ -1,13 +1,13 @@
 <!-- Página apois logar -->
 <?php $id = $_GET['id']; ?>
 <!DOCTYPE html >
-  <head>
-    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
-    <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
-    <title>Localização de Usuários</title>
-    <style>
+<head>
+  <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+  <title>Localização de Usuários</title>
+  <style>
       /* Always set the map height explicitly to define the size of the div
-       * element that contains the map. */
+      * element that contains the map. */
       #map {
         height: 80%;
         padding: 10px 0 0;
@@ -34,7 +34,9 @@
   <body>
     <?php include_once "menu.php" ?>
     <div id="map"></div><br><br>
-    <div id="a"> 
+    <div id="a">
+      <a href="relatos/relatos.php?id=<?=$id?>" class="btn btn-custom btn-lg">Relatos</a><br>
+
       <a href="cads_lugar.php?id=<?=$id?>" class="btn btn-custom btn-lg">Cadastre seu Local</a><br>
       <a href="mapa.php?id=<?=$id?>" class="btn btn-custom btn-lg">Veja sua Rota</a><br>
       <a href="sair.php" class="btn btn-custom btn-lg" style="margin-left: 70px;">Sair</a>
@@ -50,7 +52,7 @@
         }
       };*/
 
-        function initMap() {
+      function initMap() {
         var map = new google.maps.Map(document.getElementById('map'), {
           center: new google.maps.LatLng(-7.840372, -34.909090),
           zoom: 5
@@ -66,8 +68,8 @@
               var address = markerElem.getAttribute('address');
               var destino = markerElem.getAttribute('destino');
               var point = new google.maps.LatLng(
-                  parseFloat(markerElem.getAttribute('lat')),
-                  parseFloat(markerElem.getAttribute('lng')));
+                parseFloat(markerElem.getAttribute('lat')),
+                parseFloat(markerElem.getAttribute('lng')));
 
               var infowincontent = document.createElement('div');
               var strong = document.createElement('strong');
@@ -94,26 +96,26 @@
 
 
 
-      function downloadUrl(url, callback) {
-        var request = window.ActiveXObject ?
-            new ActiveXObject('Microsoft.XMLHTTP') :
-            new XMLHttpRequest;
+        function downloadUrl(url, callback) {
+          var request = window.ActiveXObject ?
+          new ActiveXObject('Microsoft.XMLHTTP') :
+          new XMLHttpRequest;
 
-        request.onreadystatechange = function() {
-          if (request.readyState == 4) {
-            request.onreadystatechange = doNothing;
-            callback(request, request.status);
-          }
-        };
+          request.onreadystatechange = function() {
+            if (request.readyState == 4) {
+              request.onreadystatechange = doNothing;
+              callback(request, request.status);
+            }
+          };
 
-        request.open('GET', url, true);
-        request.send(null);
-      }
+          request.open('GET', url, true);
+          request.send(null);
+        }
 
-      function doNothing() {}
-    </script>
-    <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA3frGfKLCczK2SjrxuYMrJg5O_LL45boA&callback=initMap">
+        function doNothing() {}
+      </script>
+      <script async defer
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA3frGfKLCczK2SjrxuYMrJg5O_LL45boA&callback=initMap">
     </script>
   </body>
-</html>
+  </html>
