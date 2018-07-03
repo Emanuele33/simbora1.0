@@ -62,7 +62,9 @@
 								<p>Lorem ipsum dolor sit amet consectetur adipiscing. <br>
 									Duis sed dapibus leo nec ornare diam.</p>
 									<a href="cads_usuario.php" class="btn btn-custom btn-lg page-scroll" style="width: 40%">Cadastre-se</a> 
-									<a href="login.php" class="btn btn-custom btn-lg page-scroll" style="width: 40%; float: right">Login</a>
+									<?php if (!isset($_SESSION['logado'])): ?>
+										<a href="login.php" class="btn btn-custom btn-lg page-scroll" style="width: 40%; float: right">Login</a>
+									<?php endif ?>
 							</div>
 						</div>
 					</div>

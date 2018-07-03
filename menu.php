@@ -1,3 +1,6 @@
+<?php 
+include "init.php";
+?>
 <header>
 	<!-- CSS do Menu =================================-->
     <meta charset="utf-8">
@@ -50,17 +53,25 @@
         	<!-- Collect the nav links, forms, and other content for toggling -->
         	<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           		<ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="perfil.php">Perfil</a>
+                    </li>
             		<li>
             			<a href="#about" class="page-scroll">Sobre</a>
             		</li>
             		<li>
             			<a href="#services" class="page-scroll">Serviços</a>
             		</li>
-                  	<!--<li><a href="#portfolio" class="page-scroll">Gallery</a></li>
+                    
+             	<!--<li><a href="#portfolio" class="page-scroll">Gallery</a></li>
                     <li><a href="#testimonials" class="page-scroll">Testimonials</a></li>-->
+                   
                     <li>
-                    	<a href="#contact" class="page-scroll">Fale Conosco</a>
-                	</li>
+                        <?php if (isset($_SESSION['logado']) && $_SESSION['logado']): ?>
+                             <a href="sair.php">Sair</a>
+                        <?php endif ?>
+                    </li>
+                    
                 </ul>
             </div>
                 <!-- /.navbar-collapse --> 

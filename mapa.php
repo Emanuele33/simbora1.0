@@ -11,6 +11,7 @@
     </style>
   </head>
   <body>
+
         <?php include_once "menu.php" ?>
     <!-- Parâmetro sensor é utilizado somente em dispositivos com GPS -->
     <script src="http://maps.google.com/maps/api/js?sensor=true&key=AIzaSyA3frGfKLCczK2SjrxuYMrJg5O_LL45boA"></script>
@@ -169,7 +170,8 @@
         Nome:<input type="text" name="nome" placeholder="Nome"><br><br>
         Parada de Origem<input type="text" name="paradaorigem" id="txtOrigem" placeholder="Parada de Origem"><br><br>
         Parada de Destino<input type="text" name="paradadestino" id="txtDestino" placeholder="Parada de Destino"><br><br>
-        Horário:<select name="horario">
+        Horário:
+        <select name="horario">
 
       <!--<div id="forms">
         Nome:  <input type="text" name="nome" placeholder="Nome"><br><br>
@@ -177,7 +179,37 @@
         Parada de Origem:  <input type="text" name="paradaorigem"  id="txtOrigem" class="field" style="width: 400px" placeholder="Parada de Origem"><br><br>
         Parada de Destino:  <input type="text" name="paradadestino"  style="width: 400px" class="field" id="txtDestino" placeholder="Parada de Destino"><br><br>
         Horário:  <select name="horario"> !-->
-            <option value="00:00 - 00:15">00:00 - 00:15</option>
+            <?php
+                $h1 = 0;
+                $h2 = 0;
+                $m1 = 0;
+                $m2 = 15;
+                // 96
+                for ($i = 0; $i < 96; $i++) {
+                    $m1 += 15;
+                    $m2 += 15;
+                    
+                    if ($m1 == 60) {
+                        $m1 = 0;
+                        $h1++;
+                    }
+                    if ($m2 == 60) {
+                        $m2 = 0;
+                        $h2++;
+                    }
+                    if ($h1 < 10) {
+                        if ($h2 < 10) {
+                            if ($m1) {
+                                # code...
+                            }
+                        echo "<option value='0" . $h1 . ":" . $m1 . " - 0" . $h2 . ":" . $m2 . "'>0" . $h1 . ":" . $m1 . " - 0" . $h2 . ":" . $m2 . "</option>";
+                        }
+                    }
+
+
+                }
+            ?>
+            <!-- <option value="00:00 - 00:15">00:00 - 00:15</option>
             <option value="00:15 - 00:30">00:15 - 00:30</option>
             <option value="00:30 - 00:45">00:30 - 00:45</option>
             <option value="00:45 - 01:00">00:45 - 01:00</option>
@@ -296,12 +328,13 @@
             <option value="23:00 - 23:15">23:00 - 23:15</option>
             <option value="23:15 - 23:30">23:15 - 23:30</option>
             <option value="23:30 - 23:45">23:30 - 23:45</option>
-            <option value="23:45 - 00:00">23:45 - 00:00</option>
+            <option value="23:45 - 00:00">23:45 - 00:00</option> -->
         </select><br><br>
        <input type="button" value="Calcular dist&acirc;ncia" onclick="CalculaDistancia()" class="btnNew" />
-       <input type="submit" name="Cadastrar Rotas" class="btnNew">
+       <input type="submit" name="Cadastrar Rotas" class="btnNew"><br>
         
-       <a href="tabelahorarios.php?id=<?=$id?>">Ver Horários</a>
+       <a href="tabelahorarios.php?id=<?=$id?>">Veja meninas com sua mesma rota</a>
+
     </form>
         <!--<tbody>
             <tr>

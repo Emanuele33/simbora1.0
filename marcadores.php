@@ -39,7 +39,6 @@
 
       <a href="cads_lugar.php?id=<?=$id?>" class="btn btn-custom btn-lg">Cadastre seu Local</a><br>
       <a href="mapa.php?id=<?=$id?>" class="btn btn-custom btn-lg">Veja sua Rota</a><br>
-      <a href="sair.php" class="btn btn-custom btn-lg" style="margin-left: 70px;">Sair</a>
     </div>
 
     <script>

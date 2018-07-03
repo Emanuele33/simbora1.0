@@ -4,7 +4,6 @@ session_start();
 
 
 $_SESSION['logado'] = false;
-$_SESSION['usuario'] = "";
 $login = $_POST['login'];
 $senha = $_POST['senha'];
 
@@ -26,3 +25,5 @@ if ($consulta->rowCount() >= 1) {
 
 
 ?>
+
+
