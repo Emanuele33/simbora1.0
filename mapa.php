@@ -179,7 +179,7 @@
         Parada de Origem:  <input type="text" name="paradaorigem"  id="txtOrigem" class="field" style="width: 400px" placeholder="Parada de Origem"><br><br>
         Parada de Destino:  <input type="text" name="paradadestino"  style="width: 400px" class="field" id="txtDestino" placeholder="Parada de Destino"><br><br>
         Horário:  <select name="horario"> !-->
-            <?php
+           <!--  <?php
                 $h1 = 0;
                 $h2 = 0;
                 $m1 = 0;
@@ -208,8 +208,8 @@
 
 
                 }
-            ?>
-            <!-- <option value="00:00 - 00:15">00:00 - 00:15</option>
+            ?> -->
+            <option value="00:00 - 00:15">00:00 - 00:15</option>
             <option value="00:15 - 00:30">00:15 - 00:30</option>
             <option value="00:30 - 00:45">00:30 - 00:45</option>
             <option value="00:45 - 01:00">00:45 - 01:00</option>
@@ -396,8 +396,8 @@
 
         function doNothing() {} -->
     </script>
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA3frGfKLCczK2SjrxuYMrJg5O_LL45boA&callback=initMap">
-    </script>
+    <!-- <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA3frGfKLCczK2SjrxuYMrJg5O_LL45boA&callback=initMap">
+    </script> -->
   </div>
 </body>
 </html>
