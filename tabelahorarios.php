@@ -28,6 +28,7 @@ if (!$_SESSION['logado']){
 			<th>Parada de Origem</th>
 			<th>Parada de Destino</th>
 			<th>Horário</th>
+			
 
 		</tr>
 
@@ -60,6 +61,7 @@ if (!$_SESSION['logado']){
 				<td> ".$paradaorigem."</td>
 				<td> ".$paradadestino."</td>
 				<td>".$horario."</td> 
+				<td><a href='chat/index.php?id=' . $id'>Iniciar Conversa</a></td>
 
 				</tr>";
 			}

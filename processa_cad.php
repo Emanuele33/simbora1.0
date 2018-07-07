@@ -1,5 +1,7 @@
+<?php $id = $_GET['id']; ?>
 <?php 
 include 'conexao.php';
+
 
 $name = $_POST['name'];
 $address = $_POST['address'];
@@ -19,7 +21,7 @@ $consulta->bindParam(5,$type);
 $consulta->execute();
 
 
-header('location:mapa.php?id=' . $id);
+header('location:marcadores.php?id=' . $id);
 
 
 //header('location:mapa.php');

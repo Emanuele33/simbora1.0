@@ -1,3 +1,4 @@
+<?php $id = $_GET['id']; ?>
 <?php
 
 include 'conexao.php';
@@ -22,7 +23,7 @@ if ($_SESSION['logado'] == false){
 		unset($_SESSION['msg']);
 	}
 	?>
-	<form method="POST" action="processa_cad.php">
+	<form method="POST" action="processa_cad.php?id=<?=$id?>">
 		<label>Nome: </label>
 		<input type="text" name="name" placeholder="Nome da Empresa ou Filial"><br><br>
 
