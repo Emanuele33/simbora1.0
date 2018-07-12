@@ -57,10 +57,7 @@ include "init.php";
                         <a href="perfil.php">Perfil</a>
                     </li>
             		<li>
-            			<a href="#about" class="page-scroll">Sobre</a>
-            		</li>
-            		<li>
-            			<a href="#services" class="page-scroll">Serviços</a>
+            			<a href="marcadores.php" class="page-scroll">Voltar</a>
             		</li>
                     
              	<!--<li><a href="#portfolio" class="page-scroll">Gallery</a></li>
@@ -78,6 +75,7 @@ include "init.php";
         </div>
               <!-- /.container-fluid --> 
     </nav>
+</body>
 
 
 

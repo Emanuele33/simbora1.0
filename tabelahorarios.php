@@ -14,13 +14,54 @@ if (!$_SESSION['logado']){
 <head>
 	<meta charset="utf-8">
 	<title>Tabela de Horários</title>
+	<style>
+	*{
+		margin: 0;
+		padding: 0;
+	}
+	.pesquisa{
+		width: 400px;
+		height: 40px;
+		margin-left: 30%;
+		/*margin-top: 5%;*/
+	}
+	#texto{
+		width: 350px
+		height: 40px;
+		float: left;
+		font-family: "Arial";
+		font-size: 20px;
+	}
+	.btn{
+		width: 38px;
+		height: 28px;
+		background-color: #b73c9b;
+		padding: 5px 10px;
+		cursor: pointer;
+	}
+	table {
+	    border-collapse: collapse;
+	    width: 40%;
+	    margin: 0 auto;
+	}
+
+	th, td {
+	    padding: 8px;
+	    text-align: left;
+	    border-bottom: 1px solid #ddd;
+	}
+
+	tr:hover {background-color:#f5f5f5;}
+	</style>
 </head>
 <body>
+	<br><br><br><br><br>
 	<!--<h1>Bem-Vinda, <?php //echo $_SESSION['usuario']; ?></h1>-->
-	<h2>Tabela de Horários</h2>
-
-	<form action="tabelahorarios.php" method="POST">
-		<input type="text" name="buscar" placeholder="Pesquise por: Horários,Parada de Destino ou Parada de Origem">
+	<h2 style="margin-left: 35%">Tabela de Horários</h2>
+	<br>
+	<form action="tabelahorarios.php" method="POST" class="pesquisa">
+		<input type="text" name="buscar" placeholder="Pesquise por: Parada de Destino">
+		<img src="lupa.png" class="btn">
 	</form><br>
 	<table class="quadrado" border="1">
 		<tr>
@@ -52,21 +93,15 @@ if (!$_SESSION['logado']){
 				$paradaorigem = $dados['paradaorigem'];
 				$paradadestino = $dados['paradadestino'];
 				$horario = $dados['horario'];
-
-
-
-
 				echo "<tr>
 				<td> ".$nome."</td>
 				<td> ".$paradaorigem."</td>
 				<td> ".$paradadestino."</td>
 				<td>".$horario."</td> 
 				<td><a href='chat/index.php?id=' . $id'>Iniciar Conversa</a></td>
-
 				</tr>";
 			}
 		}
-
 		?>
 
 

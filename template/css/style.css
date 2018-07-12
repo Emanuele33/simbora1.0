@@ -355,7 +355,7 @@ ol.type li a:hover {
 }
 /* Achivements Section */
 #achievements {
-	background: url(../img/achievements-bg.jpg) no-repeat center bottom fixed;
+	background: url(achievements-bg.jpg) no-repeat center bottom fixed;
 	background-color: #e5e5e5;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;

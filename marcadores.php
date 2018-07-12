@@ -9,18 +9,19 @@
       /* Always set the map height explicitly to define the size of the div
       * element that contains the map. */
       #map {
-        height: 80%;
+        height: 87%;
         padding: 10px 0 0;
         clear: both;
         margin-left: 400px;
-        margin-top: 70px;
+        margin-top: 100px;
       }
       #a{
-        height: 80%;
+        height: 70px;
+        width: 50px;
         padding: 10px 0 0;
         clear: both;
         margin-left: 80px;
-        margin-top: -500px;
+        margin-top: -550px;
       }
       /* Optional: Makes the sample page fill the window. */
       html, body {
@@ -35,10 +36,10 @@
     <?php include_once "menu.php" ?>
     <div id="map"></div><br><br>
     <div id="a">
-      <a href="relatos/relatos.php?id=<?=$id?>" class="btn btn-custom btn-lg">Relatos</a><br>
+      <a href="relatos/relatos.php?id=<?=$id?>" class="btn btn-custom btn-lg" style="width: 500%;">Relatos</a><br>
 
-      <a href="cads_lugar.php?id=<?=$id?>" class="btn btn-custom btn-lg">Cadastre seu Local</a><br>
-      <a href="mapa.php?id=<?=$id?>" class="btn btn-custom btn-lg">Veja sua Rota</a><br>
+      <!-- <a href="cads_lugar.php?id=<?=$id?>" class="btn btn-custom btn-lg">Cadastre seu Local</a><br> -->
+      <a href="mapa.php?id=<?=$id?>" class="btn btn-custom btn-lg" style="width: 500%;">Cadastre sua Rota</a><br>
     </div>
 
     <script>

@@ -1,4 +1,3 @@
-<!-- Primeira página -->
 <!DOCTYPE html>
 <html>
 	<head>
@@ -59,12 +58,10 @@
 						<div class="row">
 							<div class="intro-text"> <span>Bem-vinda ao</span>
 								<h1>Simbora</h1>
-								<p>Lorem ipsum dolor sit amet consectetur adipiscing. <br>
-									Duis sed dapibus leo nec ornare diam.</p>
+								<p>Compartilhamos e incentivamos uma corrente de empoderamento e fortalecimento. <br>
+									Aqui vivenciamos a sororidade.</p>
 									<a href="cads_usuario.php" class="btn btn-custom btn-lg page-scroll" style="width: 40%">Cadastre-se</a> 
-									<?php if (!isset($_SESSION['logado'])): ?>
-										<a href="login.php" class="btn btn-custom btn-lg page-scroll" style="width: 40%; float: right">Login</a>
-									<?php endif ?>
+									<a href="login.php" class="btn btn-custom btn-lg page-scroll" style="width: 40%; float: right">Login</a>
 							</div>
 						</div>
 					</div>
@@ -79,12 +76,13 @@
 					<hr>
 				</div>
 				<div class="row">
-					<div class="col-xs-12 col-md-6"> <img src="img/about.png" class="img-responsive" alt=""> </div>
+					<div class="col-xs-12 col-md-6"> 
+						<img src="simbora1.png" class="img-responsive" alt=""> </div>
 					<div class="col-xs-12 col-md-6">
 						<div class="about-text">
-							<h3>Lorem ipsum dolor sit amet!</h3>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam. Sed commodo nibh ante facilisis bibendum dolor feugiat at. Duis sed dapibus leo nec ornare diam commodo nibh.</p>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam. Sed commodo nibh ante facilisis bibendum dolor feugiat at. Duis sed dapibus leo nec ornare.</p>
+							<h3>O que somos?</h3>
+							<p>O site consiste em reunir mulheres que fazem trajetos semelhantes nas cidades, para que percorram trechos mais perigosos juntas. Só as mulheres entendem o alívio que é estar passando numa rua escura e perceber que a pessoa caminhando atrás da mesma era outra mulher. </p>
+							<p>Infelizmente uma grande quantidade dos homens não entendem o quão hostil pode ser o ambiente urbano para uma mulher. Enquanto essa realidade não mudar, precisaremos tomar medidas preventivas, assim como o movimento Simbora.</p>
 						</div>
 					</div>
 				</div>
@@ -96,25 +94,25 @@
 				<div class="col-md-10 col-md-offset-1 section-title">
 					<h2>Nossos Serviços</h2>
 					<hr>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit duis sed dapibus leonec.</p>
+					<p>Nós temos várias ideias para facilitar a sua jornada diária. Pode contar conosco para encontrar uma forma mais segura e amigável para andar nas ruas. Conheça aqui alguns dos nossos serviços.</p>
 				</div>
 				<div class="row">
+					<div class="col-xs-6 col-md-3"> <!-- <i class="fa fa-bullhorn"></i> -->
+						<!-- <h4>Marcadores</h4>
+						<p>Através dos marcadores localizados no mapa, você poderá visualizar outras mulheres que irão percorrer caminhos semelhantes ao seu.</p> -->
+					</div> 
 					<div class="col-xs-6 col-md-3"> <i class="fa fa-comments-o"></i>
-						<h4>Lorem ipsum</h4>
-						<p>Lorem ipsum dolor sit amet placerat facilisis felis mi in tempus eleifend pellentesque natoque etiam.</p>
-					</div>
-					<div class="col-xs-6 col-md-3"> <i class="fa fa-bullhorn"></i>
-						<h4>Dolor sit amet</h4>
-						<p>Lorem ipsum dolor sit amet placerat facilisis felis mi in tempus eleifend pellentesque.</p>
-					</div>
+						<h4>Relatos</h4>
+						<p>Através dos marcadores localizados no mapa, você poderá visualizar relatos de mulheres que sofreram algum tipo de assédio na determinada localidade.</p>
+					</div> 
 					<div class="col-xs-6 col-md-3"> <i class="fa fa-group"></i>
-						<h4>Tempus eleifend</h4>
-						<p>Lorem ipsum dolor sit amet placerat facilisis felis mi in tempus eleifend pellentesque natoque etiam.</p>
+						<h4>Listagem de Usuárias</h4>
+						<p>Opção de mostrar as mulheres que irão percorrer o mesmo caminho que você.</p>
 					</div>
-					<div class="col-xs-6 col-md-3"> <i class="fa fa-magic"></i>
+					<<!-- div class="col-xs-6 col-md-3"> <i class="fa fa-magic"></i>
 						<h4>Pellentesque</h4>
 						<p>Lorem ipsum dolor sit amet placerat facilisis felis mi in tempus eleifend pellentesque natoque.</p>
-					</div>
+					</div> -->
 				</div>
 			</div>
 		</div>
@@ -258,28 +256,28 @@
 	<div class="overlay">
 		<div class="container">
 			<div class="section-title center">
-				<h2>Curiosidades</h2>
+				<h2>DADOS DE ASSÉDIO NO BRASIL</h2>
 				<hr>
 			</div>
 			<div class="row">
 				<div class="col-md-3 col-sm-3">
-					<div class="achievement-box"> <span class="count">260</span>
-						<h4>Customers</h4>
+					<div class="achievement-box"> <span class="count">503</span>
+						<h4>Mulheres brasileiras sofrem agressão física a cada hora</h4>
 					</div>
 				</div>
 				<div class="col-md-3 col-sm-3">
-					<div class="achievement-box"> <span class="count">83</span>
-						<h4>Developers</h4>
+					<div class="achievement-box"> <span class="count">5.2</span>
+						<h4>Milhões de Mulheres sofreram assédio no transporte público. </h4>
 					</div>
 				</div>
 				<div class="col-md-3 col-sm-3">
-					<div class="achievement-box"> <span class="count">571</span>
-						<h4>Projects</h4>
+					<div class="achievement-box"> <span class="count">20.4</span>
+						<h4>Milhões de mulheres já receberam comentários desrespeitosos nas ruas.</h4>
 					</div>
 				</div>
 				<div class="col-md-3 col-sm-3">
-					<div class="achievement-box"> <span class="count">12</span>
-						<h4>Awards</h4>
+					<div class="achievement-box"> <span class="count">2.2</span>
+						<h4>Milhões de mulheres já foram beijadas ou agarradas sem consentimento.</h4>
 					</div>
 				</div>
 			</div>
@@ -296,25 +294,35 @@
     <div class="row">
       <div class="col-md-8 col-md-offset-2">
         <div id="testimonial" class="owl-carousel owl-theme">
-          <div class="item"> <img src="img/clients/01.jpg" alt=""/>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam. Sed commodo nibh ante facilisis bibendum dolor feugiat at duis sed dapibus leo nec ornare diam.</p>
-            <p><strong>John DOE</strong>, CEO, Company.</p>
+          <div class="item"> <img src="01.jpg" alt=""/>
+            <br>
+            <br>
+            <br>
+            <p><strong>Eduardo Lonardi</strong>, IFPE, Analista de Redes.</p>
           </div>
-          <div class="item"> <img src="img/clients/02.jpg" alt=""/>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam. Sed commodo nibh ante facilisis bibendum dolor feugiat at duis sed dapibus leo nec ornare diam.</p>
-            <p><strong>Jenny DOE</strong>, CEO, Company.</p>
+          <div class="item"> <img src="02.jpg" alt=""/>
+            <br>
+            <br>
+            <br>
+            <p><strong>Emanuele Garcia</strong>, IFPE, Desenvolvedora Back-End.</p>
           </div>
-          <div class="item"> <img src="img/clients/03.jpg" alt=""/>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam. Sed commodo nibh ante facilisis bibendum dolor feugiat at duis sed dapibus leo nec ornare diam.</p>
-            <p><strong>Jenny DOE</strong>, CEO, Company.</p>
+          <div class="item"> <img src="03.jpg" alt=""/>
+            <br>
+            <br>
+            <br>
+            <p><strong>Maria Eduarda</strong>, IFPE, Desenvolvedora Front-End.</p>
           </div>
-          <div class="item"> <img src="img/clients/02.jpg" alt=""/>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam. Sed commodo nibh ante facilisis bibendum dolor feugiat at duis sed dapibus leo nec ornare diam.</p>
-            <p><strong>Jenny DOE</strong>, CEO, Company.</p>
+          <div class="item"> <img src="04.jpg" alt=""/>
+            <br>
+            <br>
+            <br>
+            <p><strong>Rhaiza Aguiar</strong>, IFPE, Desenvolvedora Front-End.</p>
           </div>
-          <div class="item"> <img src="img/clients/03.jpg" alt=""/>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam. Sed commodo nibh ante facilisis bibendum dolor feugiat at duis sed dapibus leo nec ornare diam.</p>
-            <p><strong>John DOE</strong>, CEO, Company.</p>
+          <div class="item"> <img src="05.jpg" alt=""/>
+            <br>
+            <br>
+            <br>
+            <p><strong>Yago Nascimento</strong>, IFPE, Desenvolvedora Back-End.</p>
           </div>
         </div>
       </div>
@@ -327,7 +335,7 @@
 			<div class="section-title center">
 				<h2>Fale Conosco</h2>
 				<hr>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit duis sed dapibus leonec.</p>
+				
 			</div>
 			<div class="col-md-8 col-md-offset-2">
 				<form name="sentMessage" id="contactForm" novalidate>
@@ -381,12 +389,3 @@
 	<script type="text/javascript" src="js/main.js"></script>
 </body>
 </html>
-		
-
-
-
-
-
-		<h1>Simbora</h1>
-		<a href="cads_usuario.php">Cadastre-se</a>
-		<a href="login.php">Login</a>

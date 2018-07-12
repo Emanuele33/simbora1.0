@@ -1,3 +1,4 @@
+
 <!-- Página apois logar -->
 <?php $id = $_GET['id']; ?>
 <!DOCTYPE html >
@@ -9,11 +10,11 @@
       /* Always set the map height explicitly to define the size of the div
       * element that contains the map. */
       #map {
-      	height: 80%;
+      	height: 90%;
       	padding: 10px 0 0;
       	clear: both;
       	margin-left: 400px;
-      	margin-top: 70px;
+      	margin-top: 5%;
       }
       #a{
       	height: 80%;
@@ -28,13 +29,23 @@
       	margin: 0;
       	padding: 0;
       }
+      #relatos{
+        height: 70px;
+        width: 50px;
+        padding: 10px 0 0;
+        clear: both;
+        margin-left: 80px;
+        margin-top: -550px;
+      }
   </style>
 </head>
 
 <body>
 	<?php include_once "../menu.php" ?>
 	<div id="map"></div><br><br>
-	<a href="cads_relatos.php?id=<?=$id?>">Cadastrar Relato</a>
+  <div id="relatos">
+	   <a href="cads_relatos.php?id=<?=$id?>" class="btn btn-custom btn-lg" style="width: 500%;">Cadastrar Relato</a>
+  </div>
 	<div id="a">
 
 	</div>
